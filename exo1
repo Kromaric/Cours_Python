@@ -1,0 +1,21 @@
+
+
+def equation(a, b, c):
+    discriminant = b**2 - 4*a*c
+    racine_discriminant = discriminant**(1/2)
+    if discriminant < 0:
+        return "Cette équation n'a pas de solution dans R"
+    elif discriminant == 0:
+        return  f"L'équation admet une unique solution X = {-b/2*a}"
+    elif discriminant > 0:
+        return f"L'équation admet deux solutions X1 = {(-b-racine_discriminant)/2*a} et X2 = {(-b+racine_discriminant)/2*a}"
+
+
+print("Résolution d'équation de type aX^2 + bX + c".center(50,'_'))
+
+a = int(input("Veillez entrer le coéfficient 'a' de votre équation"))
+b = int(input("Veillez entrer le coéfficient 'b' de votre équation"))
+c = int(input("Veillez entrer le coéfficient 'c' de votre équation"))
+
+print(equation(a, b, c))
+
